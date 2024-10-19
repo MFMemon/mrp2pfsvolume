@@ -9,6 +9,6 @@
         path: /tmp/fsvolumerun.logs
         state: touch
 
-    - name: Install seaweedfs and start master server
-      ansible.builtin.shell: nohup /tmp/runfsserver.sh {{index . 0}} {{index . 1}} </dev/null >/tmp/fsmasterrun.logs 2>&1 &
+    - name: Install seaweedfs and start volume server
+      ansible.builtin.shell: nohup /tmp/runfsserver.sh {{index . 0}} {{index . 1}} </dev/null >/tmp/fsvolumerun.logs 2>&1 &
       become: true
