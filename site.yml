@@ -2,7 +2,7 @@
 
   tasks:
     - name: Transfer the weedfs script
-      copy: src=runfsserver.sh dest=/tmp/ mode=0777
+      copy: src=runfsvolserver.sh dest=/tmp/ mode=0777
 
     - name: Create file for volume server logs
       ansible.builtin.file:
@@ -10,5 +10,5 @@
         state: touch
 
     - name: Install seaweedfs and start volume server
-      ansible.builtin.shell: nohup /tmp/runfsserver.sh {{index . 0}} {{index . 1}} </dev/null >/tmp/fsvolumerun.logs 2>&1 &
+      ansible.builtin.shell: nohup /tmp/runfsvolserver.sh {{index . 0}} {{index . 1}} </dev/null >/tmp/fsvolumerun.logs 2>&1 &
       become: true
