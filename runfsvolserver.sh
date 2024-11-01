@@ -13,4 +13,5 @@ tar xzvf /tmp/seaweedfs-${SEAWEEDFS_VER}-linux-amd64_full.tar.gz -C /tmp/seaweed
 rm -f /tmp/seaweedfs-${SEAWEEDFS_VER}-linux-amd64_full.tar.gz
 
 mkdir /tmp/seaweedfs/volumedir
-/tmp/seaweedfs/weed volume -port=$1 -dir=volumedir -max=1 -mserver=$2 -dataCenter=dc1 -rack=rack1
+/tmp/seaweedfs/weed volume -port=$1 -dir=volumedir -max=1 -mserver=$2
+# /tmp/seaweedfs/weed volume -port=$1 -dir=volumedir -max=1 -mserver=$2 -dataCenter=dc1 -rack=rack1
